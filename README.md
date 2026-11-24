@@ -43,11 +43,16 @@ dsh-github-prior-art@0.1.1
 
 左侧 **Plugins** → **Add plugin** → 搜索 `dsh-github-prior-art` → **Install**。装完刷新页面即可，常驻规矩与技能自动生效，无需改任何配置文件。
 
-### 方式 B：CLI
+### 方式 B：npm / CLI
+
+包已发布到 npmjs：[`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art)。DSH 装插件时就是从 npm 取这个包：
 
 ```sh
+npm view dsh-github-prior-art version   # → 0.1.1
 dsh plugin --profile <你的 profile> add dsh-github-prior-art
 ```
+
+装的是 npm 上的 `dsh-github-prior-art@0.1.1`，不是仓库里的源码；想跑最新提交才用 `add ./dsh-github-prior-art`。
 
 ### 方式 C：只装技能，不装插件
 

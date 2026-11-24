@@ -43,11 +43,16 @@ dsh-github-prior-art@0.1.1
 
 **Plugins** → **Add plugin** → search `dsh-github-prior-art` → **Install**. Refresh the page; the rule and the skill are live. No config file is edited.
 
-### CLI
+### npm / CLI
+
+The package is on npmjs: [`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art). DSH installs the npm package, not the source tree:
 
 ```sh
+npm view dsh-github-prior-art version   # → 0.1.1
 dsh plugin --profile <profile> add dsh-github-prior-art
 ```
+
+Use `add ./dsh-github-prior-art` only when you want the latest commit.
 
 ### Skill only, no plugin
 
