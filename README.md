@@ -2,7 +2,7 @@
 
 # dsh-github-prior-art
 
-[English](README.en.md) · MIT · **0.1.1**
+[English](README.en.md) · MIT · **0.1.2**
 
 [![npm version](https://img.shields.io/npm/v/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
 [![npm downloads](https://img.shields.io/npm/dm/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
@@ -16,7 +16,7 @@ Agent 最贵的浪费不是写错代码，是把别人维护了三年的轮子�
 **安装**：DSH 侧栏 **Plugins** → **Add plugin**，粘贴下面这一行，点 **Install**：
 
 ```
-dsh-github-prior-art@0.1.1
+dsh-github-prior-art@0.1.2
 ```
 
 ---
@@ -48,11 +48,11 @@ dsh-github-prior-art@0.1.1
 包已发布到 npmjs：[`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art)。DSH 装插件时就是从 npm 取这个包：
 
 ```sh
-npm view dsh-github-prior-art version   # → 0.1.1
+npm view dsh-github-prior-art version   # → 0.1.2
 dsh plugin --profile <你的 profile> add dsh-github-prior-art
 ```
 
-装的是 npm 上的 `dsh-github-prior-art@0.1.1`，不是仓库里的源码；想跑最新提交才用 `add ./dsh-github-prior-art`。
+装的是 npm 上的 `dsh-github-prior-art@0.1.2`，不是仓库里的源码；想跑最新提交才用 `add ./dsh-github-prior-art`。
 
 ### 方式 C：只装技能，不装插件
 

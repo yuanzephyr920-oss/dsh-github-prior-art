@@ -2,7 +2,7 @@
 
 # dsh-github-prior-art
 
-[中文](README.md) · MIT · **0.1.1**
+[中文](README.md) · MIT · **0.1.2**
 
 [![npm version](https://img.shields.io/npm/v/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
 [![npm downloads](https://img.shields.io/npm/dm/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
@@ -16,7 +16,7 @@ The most expensive waste an agent commits is not a wrong line of code — it is 
 **Install**: open **Plugins** in the DSH sidebar → **Add plugin** → paste the line below → **Install**:
 
 ```
-dsh-github-prior-art@0.1.1
+dsh-github-prior-art@0.1.2
 ```
 
 ---
@@ -48,7 +48,7 @@ dsh-github-prior-art@0.1.1
 The package is on npmjs: [`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art). DSH installs the npm package, not the source tree:
 
 ```sh
-npm view dsh-github-prior-art version   # → 0.1.1
+npm view dsh-github-prior-art version   # → 0.1.2
 dsh plugin --profile <profile> add dsh-github-prior-art
 ```
 
