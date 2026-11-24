@@ -45,6 +45,7 @@ export function apply(ctx) {
       skills.register({
         name: 'github-prior-art',
         description: descriptionOf(raw),
+        source: 'runtime',
         content: stripFrontmatter(raw),
       })
     } catch (error) {

@@ -16,6 +16,7 @@ apply(ctx)
 
 assert.equal(registered.length, 1, '应当注册 1 个技能')
 assert.equal(registered[0].name, 'github-prior-art')
+assert.equal(registered[0].source, 'runtime', '技能必须声明 source，否则加载时报 source must be a string')
 assert.ok(registered[0].description.length > 0, '技能描述不能为空')
 assert.ok(registered[0].content.includes('## 第一步：搜'), '技能正文应包含检索步骤')
 assert.ok(!registered[0].content.startsWith('---'), '正文应去掉 frontmatter')
