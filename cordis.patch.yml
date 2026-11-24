@@ -1,0 +1,6 @@
+# dsh-github-prior-art bundle patch
+#
+# 装包时自动挂载（Loader bundle 层）。手动挂载时在 profile 的 cordis.patch.yml 加同样一段。
+- insert:
+    - id: github-prior-art
+      name: 'dsh-github-prior-art'

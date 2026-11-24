@@ -1,0 +1,49 @@
+{
+  "name": "dsh-github-prior-art",
+  "version": "0.1.0",
+  "description": "DSH 规矩：创造性开工前先查 GitHub 同类项目，防止重复发明轮子。装完自带常驻规矩 + github-prior-art 技能。",
+  "license": "MIT",
+  "author": "红一角 (yuanzephyr920-oss)",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skills",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "assets"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill",
+    "agent-skill",
+    "github",
+    "prior-art",
+    "search"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanzephyr920-oss/dsh-github-prior-art.git"
+  },
+  "homepage": "https://github.com/yuanzephyr920-oss/dsh-github-prior-art#readme",
+  "bugs": {
+    "url": "https://github.com/yuanzephyr920-oss/dsh-github-prior-art/issues"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  }
+}
