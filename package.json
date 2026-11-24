@@ -1,7 +1,7 @@
 {
   "name": "dsh-github-prior-art",
-  "version": "0.1.0",
-  "description": "DSH 规矩：创造性开工前先查 GitHub 同类项目，防止重复发明轮子。装完自带常驻规矩 + github-prior-art 技能。",
+  "version": "0.1.1",
+  "description": "Standing rule + skill for DeepSeek Harness: before building anything from scratch, search GitHub for prior art and write candidates, decision and reason in three lines.",
   "license": "MIT",
   "author": "红一角 (yuanzephyr920-oss)",
   "type": "module",
@@ -16,9 +16,13 @@
     "skills",
     "README.md",
     "README.en.md",
+    "CHANGELOG.md",
     "LICENSE",
     "assets"
   ],
+  "engines": {
+    "node": ">=20"
+  },
   "dsh": {
     "manifestVersion": 1,
     "bundle": {
@@ -31,8 +35,11 @@
     "deepseek-harness",
     "skill",
     "agent-skill",
+    "agent",
     "github",
     "prior-art",
+    "prior-art-search",
+    "reinventing-the-wheel",
     "search"
   ],
   "repository": {
