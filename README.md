@@ -2,7 +2,7 @@
 
 # dsh-github-prior-art
 
-[English](README.en.md) · MIT · **0.1.2**
+[English](README.en.md) · MIT · **0.1.3**
 
 [![npm version](https://img.shields.io/npm/v/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
 [![npm downloads](https://img.shields.io/npm/dm/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
@@ -16,7 +16,7 @@ Agent 最贵的浪费不是写错代码，是把别人维护了三年的轮子�
 **安装**：DSH 侧栏 **Plugins** → **Add plugin**，粘贴下面这一行，点 **Install**：
 
 ```
-dsh-github-prior-art@0.1.2
+dsh-github-prior-art@0.1.3
 ```
 
 ---
@@ -43,16 +43,25 @@ dsh-github-prior-art@0.1.2
 
 左侧 **Plugins** → **Add plugin** → 搜索 `dsh-github-prior-art` → **Install**。装完刷新页面即可，常驻规矩与技能自动生效，无需改任何配置文件。
 
-### 方式 B：npm / CLI
+### 方式 B：CLI（从 npm 装）
 
-包已发布到 npmjs：[`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art)。DSH 装插件时就是从 npm 取这个包：
+包在 npmjs：[`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art)。`dsh plugin` 不自己解析包名，它把参数原样转给 pnpm——等价于在该 profile 目录里跑 `pnpm add`，所以裸包名就是「从 registry 装最新版」：
 
 ```sh
-npm view dsh-github-prior-art version   # → 0.1.2
-dsh plugin --profile <你的 profile> add dsh-github-prior-art
+# 装最新版（profile 的 package.json 里会写 ^0.1.3）
+dsh plugin --profile desktop add dsh-github-prior-art
+
+# 锁死版本
+dsh plugin --profile desktop add dsh-github-prior-art@0.1.3
 ```
 
-装的是 npm 上的 `dsh-github-prior-art@0.1.2`，不是仓库里的源码；想跑最新提交才用 `add ./dsh-github-prior-art`。
+装完 profile 的 `package.json` 多一条依赖，`dsh.profile.bundles` 自动加上 `dsh-github-prior-art`；宿主侧插件在进程里加载，**重启 DSH 生效**（刷新页面不够）。
+
+两个常见坑：
+
+- 本机默认 registry 可能是国内镜像（`npm config get registry` 查）；刚发版、镜像没同步时会拿到旧版本，显式指定官方源即可（参数原样转给 pnpm）：
+  `dsh plugin --profile desktop add dsh-github-prior-art --registry=https://registry.npmjs.org`
+- 想跑仓库里的最新提交（还没发版）才用 `add ./dsh-github-prior-art`——那是把本地目录 link 进 profile，不是从 npm 装。
 
 ### 方式 C：只装技能，不装插件
 

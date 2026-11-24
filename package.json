@@ -1,6 +1,6 @@
 {
   "name": "dsh-github-prior-art",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Standing rule + skill for DeepSeek Harness: before building anything from scratch, search GitHub for prior art and write candidates, decision and reason in three lines.",
   "license": "MIT",
   "author": "红一角 (yuanzephyr920-oss)",

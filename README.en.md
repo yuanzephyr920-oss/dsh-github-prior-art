@@ -2,7 +2,7 @@
 
 # dsh-github-prior-art
 
-[中文](README.md) · MIT · **0.1.2**
+[中文](README.md) · MIT · **0.1.3**
 
 [![npm version](https://img.shields.io/npm/v/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
 [![npm downloads](https://img.shields.io/npm/dm/dsh-github-prior-art.svg)](https://www.npmjs.com/package/dsh-github-prior-art)
@@ -16,7 +16,7 @@ The most expensive waste an agent commits is not a wrong line of code — it is 
 **Install**: open **Plugins** in the DSH sidebar → **Add plugin** → paste the line below → **Install**:
 
 ```
-dsh-github-prior-art@0.1.2
+dsh-github-prior-art@0.1.3
 ```
 
 ---
@@ -43,16 +43,25 @@ dsh-github-prior-art@0.1.2
 
 **Plugins** → **Add plugin** → search `dsh-github-prior-art` → **Install**. Refresh the page; the rule and the skill are live. No config file is edited.
 
-### npm / CLI
+### CLI (install from npm)
 
-The package is on npmjs: [`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art). DSH installs the npm package, not the source tree:
+The package is on npmjs: [`dsh-github-prior-art`](https://www.npmjs.com/package/dsh-github-prior-art). `dsh plugin` does not resolve names itself — it forwards its arguments to pnpm (a `pnpm add` inside that profile directory), so a bare package name means "install the latest from the registry":
 
 ```sh
-npm view dsh-github-prior-art version   # → 0.1.2
-dsh plugin --profile <profile> add dsh-github-prior-art
+# latest (writes ^0.1.3 into the profile's package.json)
+dsh plugin --profile desktop add dsh-github-prior-art
+
+# pin an exact version
+dsh plugin --profile desktop add dsh-github-prior-art@0.1.3
 ```
 
-Use `add ./dsh-github-prior-art` only when you want the latest commit.
+The profile's `package.json` gets the dependency and `dsh.profile.bundles` gains `dsh-github-prior-art`; host-side plugins load inside the process, so **restart DSH** (a page refresh is not enough).
+
+Two traps:
+
+- Your default registry may be a mirror; a just-published version can lag there. Point pnpm at npmjs for that install:
+  `dsh plugin --profile desktop add dsh-github-prior-art --registry=https://registry.npmjs.org`
+- Use `add ./dsh-github-prior-art` only to run the latest commit that is not released yet — that links the local folder instead of installing from npm.
 
 ### Skill only, no plugin
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- 安装一节讲清 `dsh plugin` 的语义：参数原样转给 pnpm，裸包名从 registry 装；补 `@版本` 锁版本、镜像滞后时 `--registry` 指官方源、装完要重启。
+
 ## 0.1.2
 
 - README 安装一节补上 npm：`npm view dsh-github-prior-art version` + `dsh plugin ... add dsh-github-prior-art`，并说明 DSH 装的是 npm 包而不是仓库源码。
